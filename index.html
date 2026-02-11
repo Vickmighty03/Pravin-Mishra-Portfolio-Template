@@ -602,8 +602,17 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-          <p>Pravin Mishra Portfolio v1.0 — Deployed on 10 Feb 2026 — By Victor O. Ajani</p>
+          <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate"></span> — By Victor O. Ajani</p>
       </div>
+      <script>
+  const d = new Date();
+  document.getElementById("deployDate").innerText =
+    d.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric"
+    });
+   </script>
 
     </div>
   </footer>
